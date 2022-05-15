@@ -26,8 +26,7 @@ const createCollege = async function (req, res) {
     }
 
     //Abbrevation must be a single word
-    const name = data.name.trim()
-    const collegeT = name.split(" ");
+    const collegeT = data.name.split(" ");
     const length = collegeT.length;
     if (length > 1) {
       return res.status(400).send({ status: false, message: "Abbreviated college name should be in a single word", });

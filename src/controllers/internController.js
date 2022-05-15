@@ -17,7 +17,7 @@ const createIntern = async function (req, res) {
     const collegeName = data.collegeName
 
     //Check data in request body
-    if (Object.keys(data) == 0) {
+    if (Object.keys(data).length == 0) {
       return res.status(400).send({ status: false, message: "Please Proivde Intern Details" })
     }
 
