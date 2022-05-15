@@ -22,7 +22,6 @@ const createIntern = async function (req, res) {
     }
 
     //Name is required
-    const name = data.name.trim()
     if (!isValid(data.name)) {
       return res.status(400).send({ status: false, message: "Name is required" })
     }
